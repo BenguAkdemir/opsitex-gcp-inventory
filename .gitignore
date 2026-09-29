@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+*.log
+
+# Savunma: credential dosyaları asla commit edilmez
+*credentials*.json
+*-key.json
+*.pem

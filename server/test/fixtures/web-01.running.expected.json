@@ -1,0 +1,77 @@
+{
+  "id": "gcp:servicepark-case:us-central1-a:1061225802694648740",
+  "provider": "gcp",
+  "providerId": "1061225802694648740",
+  "name": "web-01",
+  "description": "Public web server (intentionally risky demo)",
+  "account": "servicepark-case",
+  "region": "us-central1",
+  "zone": "us-central1-a",
+  "state": "running",
+  "providerState": "RUNNING",
+  "machine": {
+    "type": "e2-micro",
+    "vcpus": 2,
+    "memoryMb": 1024,
+    "sharedCpu": true,
+    "cpuPlatform": "Intel Broadwell"
+  },
+  "os": {
+    "name": "Debian 13 (trixie)",
+    "family": "debian",
+    "license": "debian-13-trixie",
+    "architecture": "x86_64"
+  },
+  "network": {
+    "privateIps": ["10.128.0.2"],
+    "publicIps": ["35.254.243.8"],
+    "interfaces": [
+      {
+        "name": "nic0",
+        "network": "default",
+        "subnet": "default",
+        "privateIp": "10.128.0.2",
+        "publicIp": "35.254.243.8",
+        "networkTier": "PREMIUM"
+      }
+    ],
+    "tags": ["http-server"],
+    "ipForwarding": false
+  },
+  "disks": [
+    {
+      "name": "web-01",
+      "boot": true,
+      "sizeGb": 10,
+      "mode": "READ_WRITE",
+      "autoDelete": true
+    }
+  ],
+  "identity": {
+    "serviceAccount": "844787416340-compute@developer.gserviceaccount.com",
+    "isDefaultServiceAccount": true,
+    "scopeLevel": "full",
+    "scopes": ["https://www.googleapis.com/auth/cloud-platform"]
+  },
+  "security": {
+    "secureBoot": false,
+    "vtpm": true,
+    "integrityMonitoring": true,
+    "confidentialCompute": false,
+    "deletionProtection": false
+  },
+  "scheduling": {
+    "provisioningModel": "standard",
+    "automaticRestart": true,
+    "onHostMaintenance": "MIGRATE",
+    "terminationAction": null
+  },
+  "labels": {},
+  "systemLabels": {},
+  "timestamps": {
+    "createdAt": "2026-09-28T12:27:56.671Z",
+    "lastStartedAt": "2026-09-28T15:36:18.003Z",
+    "lastStoppedAt": "2026-09-28T13:39:46.759Z"
+  },
+  "consoleUrl": "https://console.cloud.google.com/compute/instancesDetail/zones/us-central1-a/instances/web-01?project=servicepark-case"
+}

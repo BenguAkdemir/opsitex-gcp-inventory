@@ -1,0 +1,209 @@
+{
+  "resourcePolicies": [],
+  "networkInterfaces": [
+    {
+      "aliasIpv6Ranges": [],
+      "accessConfigs": [
+        {
+          "kind": "compute#accessConfig",
+          "_kind": "kind",
+          "name": "External NAT",
+          "_name": "name",
+          "type": "ONE_TO_ONE_NAT",
+          "_type": "type",
+          "natIP": "35.254.243.8",
+          "_natIP": "natIP",
+          "networkTier": "PREMIUM",
+          "_networkTier": "networkTier"
+        }
+      ],
+      "aliasIpRanges": [],
+      "ipv6AccessConfigs": [],
+      "kind": "compute#networkInterface",
+      "_kind": "kind",
+      "name": "nic0",
+      "_name": "name",
+      "networkIP": "10.128.0.2",
+      "_networkIP": "networkIP",
+      "network": "https://www.googleapis.com/compute/v1/projects/servicepark-case/global/networks/default",
+      "_network": "network",
+      "fingerprint": "JRJDqhsP2VE=",
+      "_fingerprint": "fingerprint",
+      "subnetwork": "https://www.googleapis.com/compute/v1/projects/servicepark-case/regions/us-central1/subnetworks/default",
+      "_subnetwork": "subnetwork",
+      "stackType": "IPV4_ONLY",
+      "_stackType": "stackType"
+    }
+  ],
+  "disks": [
+    {
+      "guestOsFeatures": [
+        {
+          "type": "UEFI_COMPATIBLE",
+          "_type": "type"
+        },
+        {
+          "type": "VIRTIO_SCSI_MULTIQUEUE",
+          "_type": "type"
+        },
+        {
+          "type": "GVNIC",
+          "_type": "type"
+        },
+        {
+          "type": "SEV_CAPABLE",
+          "_type": "type"
+        },
+        {
+          "type": "SEV_SNP_CAPABLE",
+          "_type": "type"
+        },
+        {
+          "type": "SEV_LIVE_MIGRATABLE_V2",
+          "_type": "type"
+        },
+        {
+          "type": "IDPF",
+          "_type": "type"
+        },
+        {
+          "type": "SUSPEND_SAFE_FPR",
+          "_type": "type"
+        }
+      ],
+      "licenses": [
+        "https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-13-trixie"
+      ],
+      "boot": true,
+      "_boot": "boot",
+      "kind": "compute#attachedDisk",
+      "_kind": "kind",
+      "mode": "READ_WRITE",
+      "_mode": "mode",
+      "type": "PERSISTENT",
+      "_type": "type",
+      "deviceName": "web-01",
+      "_deviceName": "deviceName",
+      "index": 0,
+      "_index": "index",
+      "source": "https://www.googleapis.com/compute/v1/projects/servicepark-case/zones/us-central1-a/disks/web-01",
+      "_source": "source",
+      "architecture": "X86_64",
+      "_architecture": "architecture",
+      "diskSizeGb": "10",
+      "_diskSizeGb": "diskSizeGb",
+      "autoDelete": true,
+      "_autoDelete": "autoDelete",
+      "interface": "SCSI",
+      "_interface": "interface"
+    }
+  ],
+  "serviceAccounts": [
+    {
+      "scopes": [
+        "https://www.googleapis.com/auth/cloud-platform"
+      ],
+      "email": "844787416340-compute@developer.gserviceaccount.com",
+      "_email": "email"
+    }
+  ],
+  "guestAccelerators": [],
+  "labels": {},
+  "id": "1061225802694648740",
+  "_id": "id",
+  "kind": "compute#instance",
+  "_kind": "kind",
+  "name": "web-01",
+  "_name": "name",
+  "tags": {
+    "items": [
+      "http-server"
+    ],
+    "fingerprint": "FYLDgkTKlA4=",
+    "_fingerprint": "fingerprint"
+  },
+  "_tags": "tags",
+  "zone": "https://www.googleapis.com/compute/v1/projects/servicepark-case/zones/us-central1-a",
+  "_zone": "zone",
+  "shieldedInstanceConfig": {
+    "enableSecureBoot": false,
+    "_enableSecureBoot": "enableSecureBoot",
+    "enableVtpm": true,
+    "_enableVtpm": "enableVtpm",
+    "enableIntegrityMonitoring": true,
+    "_enableIntegrityMonitoring": "enableIntegrityMonitoring"
+  },
+  "_shieldedInstanceConfig": "shieldedInstanceConfig",
+  "creationTimestamp": "2026-09-28T05:27:56.671-07:00",
+  "_creationTimestamp": "creationTimestamp",
+  "_metadata": "metadata",
+  "startRestricted": false,
+  "_startRestricted": "startRestricted",
+  "reservationAffinity": {
+    "values": [],
+    "consumeReservationType": "ANY_RESERVATION",
+    "_consumeReservationType": "consumeReservationType"
+  },
+  "_reservationAffinity": "reservationAffinity",
+  "shieldedInstanceIntegrityPolicy": {
+    "updateAutoLearnPolicy": true,
+    "_updateAutoLearnPolicy": "updateAutoLearnPolicy"
+  },
+  "_shieldedInstanceIntegrityPolicy": "shieldedInstanceIntegrityPolicy",
+  "labelFingerprint": "42WmSpB8rSM=",
+  "_labelFingerprint": "labelFingerprint",
+  "status": "RUNNING",
+  "_status": "status",
+  "machineType": "https://www.googleapis.com/compute/v1/projects/servicepark-case/zones/us-central1-a/machineTypes/e2-micro",
+  "_machineType": "machineType",
+  "fingerprint": "y0ccMZz5dSM=",
+  "_fingerprint": "fingerprint",
+  "keyRevocationActionType": "NONE",
+  "_keyRevocationActionType": "keyRevocationActionType",
+  "resourceStatus": {
+    "effectiveInstanceMetadata": {
+      "vmDnsSettingMetadataValue": "ZonalOnly",
+      "_vmDnsSettingMetadataValue": "vmDnsSettingMetadataValue"
+    },
+    "_effectiveInstanceMetadata": "effectiveInstanceMetadata"
+  },
+  "_resourceStatus": "resourceStatus",
+  "displayDevice": {
+    "enableDisplay": false,
+    "_enableDisplay": "enableDisplay"
+  },
+  "_displayDevice": "displayDevice",
+  "scheduling": {
+    "nodeAffinities": [],
+    "provisioningModel": "STANDARD",
+    "_provisioningModel": "provisioningModel",
+    "onHostMaintenance": "MIGRATE",
+    "_onHostMaintenance": "onHostMaintenance",
+    "preemptible": false,
+    "_preemptible": "preemptible",
+    "automaticRestart": true,
+    "_automaticRestart": "automaticRestart"
+  },
+  "_scheduling": "scheduling",
+  "cpuPlatform": "Intel Broadwell",
+  "_cpuPlatform": "cpuPlatform",
+  "lastStopTimestamp": "2026-09-28T06:39:46.759-07:00",
+  "_lastStopTimestamp": "lastStopTimestamp",
+  "description": "Public web server (intentionally risky demo)",
+  "_description": "description",
+  "lastStartTimestamp": "2026-09-28T08:36:18.003-07:00",
+  "_lastStartTimestamp": "lastStartTimestamp",
+  "selfLink": "https://www.googleapis.com/compute/v1/projects/servicepark-case/zones/us-central1-a/instances/web-01",
+  "_selfLink": "selfLink",
+  "deletionProtection": false,
+  "_deletionProtection": "deletionProtection",
+  "canIpForward": false,
+  "_canIpForward": "canIpForward",
+  "satisfiesPzi": true,
+  "_satisfiesPzi": "satisfiesPzi",
+  "confidentialInstanceConfig": {
+    "enableConfidentialCompute": false,
+    "_enableConfidentialCompute": "enableConfidentialCompute"
+  },
+  "_confidentialInstanceConfig": "confidentialInstanceConfig"
+}
