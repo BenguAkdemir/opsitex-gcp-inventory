@@ -78,7 +78,7 @@ Tek listeleme = bir `aggregatedList` (tüm zone'lar, sayfalı) + her farklı mac
 
 ### Demo filosu
 
-VM'leri rastgele değil, normalizer'ın ve UI'ın her dalını en az bir kez tetikleyecek şekilde kurdum:
+VM'leri özellikle birbirinden farklı konfigürasyonlarla oluşturdum. Amacım normalizer'daki önemli mapping ve optional-field durumlarını ve UI'daki farklı gösterimleri gerçek GCP verisiyle görebilmek :
 
 | | web-01 | app-01 | batch-01 |
 |---|---|---|---|
@@ -107,8 +107,6 @@ VM'leri rastgele değil, normalizer'ın ve UI'ın her dalını en az bir kez tet
 
 - **Budget:** 500 TRY, %50/%90/%100 eşik. Trial kredisi ("promotional credits") hesaplamadan çıkarıldı;
   aksi halde net maliyet hep 0 görünür ve alarm hiç çalmaz. Budget harcamayı durdurmaz, sadece uyarır.
-- **Firewall:** Default VPC'de SSH tüm internete açık geliyordu; kaynağı IAP aralığına (`35.235.240.0/20`) daralttım,
-  kullanılmayan RDP kuralını sildim.
 - Demo dışında VM'ler durdurulmuş halde (durmuş VM envanterde `stopped` olarak görünmeye devam eder).
 - **Temizlik:** `infra/teardown.sh` budget'ı (billing account'ta durur, projeyle birlikte silinmez), projeyi ve yerel ADC'yi siler.
 - Ortamın tamamı `infra/setup.sh` ile tekrar kurulabilir (billing account ID ve e-posta env değişkeni, repoda yok).
