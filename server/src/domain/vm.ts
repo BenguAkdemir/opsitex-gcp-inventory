@@ -1,5 +1,4 @@
-// Sağlayıcıdan bağımsız ortak model. GCP'ye özgü hiçbir tip burada yok.
-
+export type ProviderName = 'gcp' | 'aws';
 export type VmState = 'running' | 'pending' | 'stopping' | 'stopped' | 'suspended' | 'unknown';
 export type ScopeLevel = 'full' | 'default' | 'custom' | 'none';
 
@@ -11,7 +10,7 @@ export interface MachineTypeInfo {
 
 export interface NormalizedVm {
   id: string;
-  provider: 'gcp' | 'aws';
+  provider: ProviderName;
   providerId: string;
   name: string;
   description: string | null;

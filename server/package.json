@@ -1,24 +1,22 @@
 {
-  "name": "server",
+  "name": "gcp-inventory-server",
   "version": "1.0.0",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
+  "private": true,
+  "description": "Read-only GCP Compute inventory API",
+  "engines": {
+    "node": ">=22"
   },
   "scripts": {
     "test": "vitest run",
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc -p tsconfig.test.json"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "@google-cloud/compute": "^7.5.0",
     "express": "^5.2.1",
+    "google-auth-library": "^11.1.0",
     "zod": "^4.6.5"
   },
   "devDependencies": {
